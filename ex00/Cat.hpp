@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:20:46 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:43:18 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 12:59:12 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Cat : public Animal
 {
 	public:
 		Cat();
-		Cat(const Cat &src);
-		Cat &operator=(const Cat &src);
+		Cat(const Cat& src);
+		Cat &operator=(const Cat& src);
 		~Cat();
 		
 		void makeSound() const;

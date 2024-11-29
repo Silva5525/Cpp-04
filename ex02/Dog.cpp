@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:15:07 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/29 17:38:38 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/29 18:04:49 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Dog::Dog() : brain(new Brain())
 }
 
 /// @brief Copy constructor
-Dog::Dog(const Dog& src) : Animal(src), brain (new Brain(*src.brain))
+Dog::Dog(const Dog& src) : AAnimal(src), brain (new Brain(*src.brain))
 {
 	std::cout << "Dog copy constructor called.\n";
 }
@@ -30,10 +30,11 @@ Dog& Dog::operator=(const Dog& src)
 {
 	if (this != &src)
 	{
-		Animal::operator=(src);
+		AAnimal::operator=(src);
 		if (brain)
 			delete brain;
 		brain = new Brain(*src.brain);
+
 	}
 	std::cout << "Dog assignation operator called.\n";
 	return (*this);
@@ -46,7 +47,7 @@ Dog::~Dog()
 	std::cout << "Dog destructor called.\n";
 }
 
-/// @brief Make a sound of the Dog (override the Animal class)
+/// @brief Make a sound of the Dog (override the AAnimal class)
 void Dog::makeSound() const
 {
 	std::cout << "Woof. Woof.\n";

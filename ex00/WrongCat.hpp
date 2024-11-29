@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:20:46 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:47:46 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 13:02:07 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class WrongCat : public WrongAnimal
 {
 	public:
 		WrongCat();
-		WrongCat(const WrongCat &src);
-		WrongCat &operator=(const WrongCat &src);
+		WrongCat(const WrongCat& src);
+		WrongCat& operator=(const WrongCat& src);
 		~WrongCat();
 		
 		void makeSound() const;

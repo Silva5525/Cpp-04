@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:50:39 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:49:25 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 13:00:47 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ WrongAnimal::WrongAnimal() : type("WrongAnimal")
 }
 
 /// @brief Copy constructor
-WrongAnimal::WrongAnimal(const WrongAnimal &src) : type(src.type)
+WrongAnimal::WrongAnimal(const WrongAnimal& src) : type(src.type)
 {
 	std::cout << "WrongAnimal copy constructor called.\n";
 }
 
 /// @brief Assignation operator
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &src)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal& src)
 {
 	if (this != &src)
 		type = src.type;

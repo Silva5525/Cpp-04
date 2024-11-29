@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:15:07 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:43:58 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 12:59:42 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ Dog::Dog()
 }
 
 /// @brief Copy constructor
-Dog::Dog(const Dog &src) : Animal(src)
+Dog::Dog(const Dog& src) : Animal(src)
 {
 	std::cout << "Dog copy constructor called.\n";
 }
 
 /// @brief Assignation operator
-Dog &Dog::operator=(const Dog &src)
+Dog& Dog::operator=(const Dog& src)
 {
 	if (this != &src)
 		Animal::operator=(src);

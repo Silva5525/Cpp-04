@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:50:39 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:42:08 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 12:56:41 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ Animal::Animal() : type("Animal")
 }
 
 /// @brief Copy constructor
-Animal::Animal(const Animal &src) : type(src.type)
+Animal::Animal(const Animal& src) : type(src.type)
 {
 	std::cout << "Animal copy constructor called.\n";
 }
 
 /// @brief Assignation operator
-Animal &Animal::operator=(const Animal &src)
+Animal& Animal::operator=(const Animal& src)
 {
 	if (this != &src)
 		type = src.type;

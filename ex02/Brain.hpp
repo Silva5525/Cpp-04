@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 19:34:31 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/29 17:52:34 by wdegraf          ###   ########.fr       */
+/*   Created: 2024/11/27 20:39:33 by wdegraf           #+#    #+#             */
+/*   Updated: 2024/11/29 15:44:34 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
 # include <string>
 
-/// @brief Represents a general Animal with polymorphic behavior.
-/// This class is part of an inheritance hierarchy to demonstrate polymorphism.
-class Animal
+/// @brief Brain Class
+/// @note it makes it possible to use a array of strings, which are Encapsulated
+/// in the private section of the class. Accessed with the setIdea and getIdea
+/// functions.
+class Brain
 {
-	protected:
-		std::string type;
-
+	private:
+		std::string ideas[100];
+	
 	public:
-		Animal();
-		Animal(const Animal& src);
-		Animal& operator=(const Animal& src);
-		virtual ~Animal();
+		Brain();
+		Brain(const Brain& src);
+		Brain& operator=(const Brain& src);
+		~Brain();
 
-		std::string getType() const;
-		virtual void makeSound() const;
+		void setIdea(int i, const std::string& idea);
+		std::string getIdea(int i) const;
 };
 
 #endif

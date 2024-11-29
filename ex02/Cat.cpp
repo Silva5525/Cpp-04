@@ -1,60 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 20:15:07 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/29 17:38:38 by wdegraf          ###   ########.fr       */
+/*   Created: 2024/11/26 20:20:46 by wdegraf           #+#    #+#             */
+/*   Updated: 2024/11/29 18:05:39 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
 /// @brief Default constructor
-Dog::Dog() : brain(new Brain())
+Cat::Cat() : brain(new Brain())
 {
-	type = "Dog";
-	std::cout << "Dog constructed.\n";
+	type = "Cat";
+	std::cout << "Cat constructor called.\n";
 }
 
 /// @brief Copy constructor
-Dog::Dog(const Dog& src) : Animal(src), brain (new Brain(*src.brain))
+Cat::Cat(const Cat &src) : AAnimal(src)
 {
-	std::cout << "Dog copy constructor called.\n";
+	std::cout << "Cat copy constructor called.\n";
 }
 
 /// @brief Assignation operator
-Dog& Dog::operator=(const Dog& src)
+Cat& Cat::operator=(const Cat& src)
 {
 	if (this != &src)
 	{
-		Animal::operator=(src);
+		AAnimal::operator=(src);
 		if (brain)
 			delete brain;
 		brain = new Brain(*src.brain);
 	}
-	std::cout << "Dog assignation operator called.\n";
+	std::cout << "Cat assignation operator called.\n";
 	return (*this);
 }
 
 /// @brief Destructor
-Dog::~Dog()
+Cat::~Cat()
 {
-	delete brain;
-	std::cout << "Dog destructor called.\n";
+	delete brain;	
+	std::cout << "Cat destructor called.\n";
 }
 
-/// @brief Make a sound of the Dog (override the Animal class)
-void Dog::makeSound() const
+/// @brief Make a sound of the Cat (override the AAnimal class)
+void Cat::makeSound() const
 {
-	std::cout << "Woof. Woof.\n";
+	std::cout << "Meow. Meow.\n";
 }
 
-/// @brief getter function for the Brain for the Dog
-/// @return brain of the Dog
-Brain* Dog::getBrain() const
+/// @brief getter function for the Brain for the Cat
+/// @return brain of the Cat
+Brain* Cat::getBrain() const
 {
 	return (brain);
 }

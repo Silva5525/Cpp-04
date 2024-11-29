@@ -6,7 +6,7 @@
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:34:31 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/27 18:46:33 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 13:01:09 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class WrongAnimal
 
 	public:
 		WrongAnimal();
-		WrongAnimal(const WrongAnimal &src);
-		WrongAnimal &operator=(const WrongAnimal &src);
+		WrongAnimal(const WrongAnimal& src);
+		WrongAnimal& operator=(const WrongAnimal& src);
 		~WrongAnimal();
 
 		std::string		getType() const;

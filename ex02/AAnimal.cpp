@@ -1,53 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:50:39 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/29 17:52:26 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/11/28 13:02:57 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 /// @brief Default constructor
-Animal::Animal() : type("Animal") 
+AAnimal::AAnimal() : type("AAnimal") 
 {
-	std::cout << "Animal constructor called.\n";
+	std::cout << "AAnimal constructor called.\n";
 }
 
 /// @brief Copy constructor
-Animal::Animal(const Animal& src) : type(src.type)
+AAnimal::AAnimal(const AAnimal& src) : type(src.type)
 {
-	std::cout << "Animal copy constructor called.\n";
+	std::cout << "AAnimal copy constructor called.\n";
 }
 
 /// @brief Assignation operator
-Animal& Animal::operator=(const Animal& src)
+AAnimal& AAnimal::operator=(const AAnimal& src)
 {
 	if (this != &src)
 		type = src.type;
-	std::cout << "Animal assignation operator called.\n";
+	std::cout << "AAnimal assignation operator called.\n";
 	return (*this);
 }
 
 /// @brief Destructor
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout << "Animal destructor called.\n";
+	std::cout << "AAnimal destructor called.\n";
 }
 
-/// @brief Get the type of the Animal
-/// @return the type of the Animal
-std::string Animal::getType() const
+/// @brief Get the type of the AAnimal
+/// @return the type of the AAnimal
+std::string AAnimal::getType() const
 {
 	return (type);
-}
-
-/// @brief Make a sound of the Animal (default)
-void Animal::makeSound() const
-{
-	std::cout << "Now you hear a Animal sound.\n";
 }
