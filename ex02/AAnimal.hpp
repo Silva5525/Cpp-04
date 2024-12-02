@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAAnimal.hpp                                        :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wdegraf <wdegraf@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:34:31 by wdegraf           #+#    #+#             */
-/*   Updated: 2024/11/29 17:51:05 by wdegraf          ###   ########.fr       */
+/*   Updated: 2024/12/02 16:13:38 by wdegraf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 /// @details
 /// virtual void makeSound() const; Virtual, but class can still be instantiated.
 /// virtual void makeSound() const = 0; Pure virtual, making the class abstract.
-
 class AAnimal
 {
 	protected:
